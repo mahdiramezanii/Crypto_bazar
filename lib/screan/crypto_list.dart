@@ -67,11 +67,11 @@ class _CryptoListState extends State<CryptoList> {
               ),
             ),
             Visibility(
-              visible: is_loading,
+                visible: is_loading,
                 child: Text(
-              "... در حال بروز رسانی داده ها",
-              style: TextStyle(color: Colors.green, fontFamily: "mr"),
-            )),
+                  "... در حال بروز رسانی داده ها",
+                  style: TextStyle(color: Colors.green, fontFamily: "mr"),
+                )),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(top: 20),
@@ -166,15 +166,14 @@ class _CryptoListState extends State<CryptoList> {
 
   Future<void> SerachData(String value) async {
     if (value.isEmpty) {
-
       setState(() {
-        is_loading=true;
+        is_loading = true;
       });
       var result = await _getData();
 
       setState(() {
         cryptoList = result;
-        is_loading=false;
+        is_loading = false;
       });
       return;
     }

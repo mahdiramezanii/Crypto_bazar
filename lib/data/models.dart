@@ -25,6 +25,6 @@ class Crypto {
         name: MapJson["name"],
         volumeUsd24Hr: double.parse(MapJson["volumeUsd24Hr"]),
         priceUsd: double.parse(MapJson["priceUsd"]),
-        changePercent24Hr: double.parse(MapJson["priceUsd"]));
+        changePercent24Hr: double.parse(MapJson["changePercent24Hr"]));
   }
 }
